@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Jiji 💜</title>
+<style>
+body{margin:0;font-family:monospace;background:linear-gradient(135deg,#5b21b6,#2563eb);overflow:hidden;color:#fff}
+.term{position:relative;z-index:2;max-width:800px;margin:40px auto;background:rgba(0,0,0,.45);padding:24px;border-radius:16px;backdrop-filter:blur(8px)}
+#t{white-space:pre-wrap;line-height:1.7}.btn{display:inline-block;margin-top:20px;padding:10px 18px;background:#7c3aed;color:#fff;text-decoration:none;border-radius:10px}
+.flower{position:fixed;top:-40px;animation:fall linear forwards;font-size:24px}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style></head><body>
+<div class="term"><h2>> Target Found: Jiji 💜</h2><div id="t"></div>
+<a class="btn" href="https://open.spotify.com/search/Risalah%20Hati%20Pamungkas" target="_blank">🎵 Play "Risalah Hati"</a>
+</div>
+<script>
+const m=`> Status : SICK
+
+Semoga cepet sembuh ya, Jiji. 🤍
+
+Cuaca Bandung juga lagi ga enak banget buat keluar.
+Mungkin tubuh kamu masih kaget yang biasanya aktivitas di rumah,
+sekarang jadi lebih sering di luar rumah.
+
+Jangan lupa minum obat yaa, Jii.
+Jangan ngerasa sendirian ya, hehe...
+
+Look at me.
+Ada aku di sini buat nemenin kamu. 💜
+
+Pantes aja kamu ga seceria waktu kita awal kenal.
+Hms... ternyata lagi sakit ya, Ji.
+
+Cepet sembuh ya...
+Aku kangen liat kamu ceria lagi. 🤍`;
+let i=0;function type(){if(i<m.length){t.textContent+=m[i++];setTimeout(type,30)}}type();
+const f=["🌸","🌷","💜"];
+setInterval(()=>{let d=document.createElement("div");d.className="flower";d.textContent=f[Math.floor(Math.random()*f.length)];
+d.style.left=Math.random()*100+"vw";d.style.animationDuration=(5+Math.random()*5)+"s";document.body.appendChild(d);setTimeout(()=>d.remove(),10000)},300);
+</script></body></html>
